@@ -1,0 +1,1 @@
+Diagrams created with https://gojs.net/latest/ and vaninlla HTML CSS JS
