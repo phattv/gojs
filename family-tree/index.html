@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+    />
+    <meta name="description" content="Tran family tree" />
+    <link
+      rel="stylesheet"
+      href="https://gojs.net/latest/assets/css/style.css"
+    />
+    <title>Family Tree</title>
+  </head>
+
+  <body>
+    <!-- This top nav is not part of the sample code -->
+    <nav id="navTop" class="w-full z-30 top-0 text-white bg-nwoods-primary">
+      <div
+        class="w-full container max-w-screen-lg mx-auto flex flex-wrap sm:flex-nowrap items-center justify-between mt-0 py-2"
+      >
+        <div class="md:pl-4">
+          <a
+            class="text-white hover:text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl rounded-lg hover:bg-nwoods-secondary"
+            href="https://gojs.net/"
+          >
+            <h1 class="mb-0 p-1">GoJS</h1>
+          </a>
+        </div>
+      </div>
+      <hr class="border-b border-gray-600 opacity-50 my-0 py-0" />
+    </nav>
+    <div
+      class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto"
+    >
+      <script src="https://gojs.net/latest/release/go.js"></script>
+      <script src="./index.js"></script>
+
+      <div class="p-4 w-full">
+        <link
+          rel="stylesheet"
+          href="https://gojs.net/latest/extensions/DataInspector.css"
+        />
+        <script src="https://gojs.net/latest/extensions/DataInspector.js"></script>
+
+        <div id="sample">
+          <div
+            id="myDiagramDiv"
+            style="
+              background-color: #34343c;
+              border: solid 1px black;
+              height: 570px;
+            "
+          ></div>
+          <p>
+            <button id="zoomToFit">Zoom to Fit</button>
+            <button id="centerRoot">Center on root</button>
+          </p>
+
+          <div>
+            <div id="myInspector"></div>
+          </div>
+          <p>
+            Original:
+            <a href="https://gojs.net/latest/samples/orgChartEditor.html"
+              >https://gojs.net/latest/samples/orgChartEditor.html</a
+            >
+          </p>
+          <div>
+            <div>
+              <button id="SaveButton" onclick="save()">Save</button>
+              <button onclick="load()">Load</button>
+              Diagram Model saved in JSON format:
+            </div>
+            <textarea id="mySavedModel" style="width: 100%; height: 270px">
+            </textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
